@@ -7,3 +7,8 @@
 
 // Bulma
 @import "node_modules/bulma/bulma";
+
+// Quick fix for Bulma Icon form z-index
+.control.has-icon .icon {
+    z-index: 1;
+}

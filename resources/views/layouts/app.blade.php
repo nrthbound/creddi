@@ -21,11 +21,12 @@
         ]) !!};
     </script>
 </head>
-<body>
-
-      @include('partials.app-nav')
+<body>      
 
         <div id="app">
+
+            @include('partials.app-nav')
+
             <section class="section">
                 <div class="container">
                     <div class="columns">

@@ -8,17 +8,15 @@
       <a class="nav-item is-tab is-hidden-mobile {{is_active('features')}}">Features</a>
 
     </div>
-    <span class="nav-toggle">
+    <span class="nav-toggle" @click="toggleMobile">
       <span></span>
       <span></span>
       <span></span>
     </span>
 
-    <div class="nav-right nav-menu">
-      <a class="nav-item is-tab is-hidden-tablet is-active">Home</a>
-      <a class="nav-item is-tab is-hidden-tablet">Features</a>
-      <a class="nav-item is-tab is-hidden-tablet">Pricing</a>
-      <a class="nav-item is-tab is-hidden-tablet">About</a>
+    <div class="nav-right nav-menu" v-bind:class="{ 'is-active' : showMobile }">
+      <a class="nav-item is-tab is-hidden-tablet{{is_active('/')}}">Home</a>
+      <a class="nav-item is-tab is-hidden-tablet {{is_active('features')}}">Features</a>
       @if(\Auth::guest())
       <a href="{{ route('login') }}" class="nav-item is-tab {{is_active('login')}}">Login</a>
       <a href="{{ route('register') }}" class="nav-item is-tab {{is_active('register')}}">Register</a>
