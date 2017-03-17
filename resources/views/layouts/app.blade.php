@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
 
     <!-- Scripts -->
     <script>
@@ -25,17 +26,25 @@
       @include('partials.app-nav')
 
         <div id="app">
-            <div class="container">
-                <div class="columns">
-                    <div class="column is-one-quarter">
-                        @include('partials.app-sidenav')
-                    </div>
-                    
-                    <div class="column">
-                        @yield('content')
+            <section class="section">
+                <div class="container">
+                    <div class="columns">
+                        @if(!\Auth::guest())                                                           
+                            <div class="column is-one-quarter">
+                                @include('partials.app-sidenav')
+                            </div>
+
+                            <div class="column">
+                                @yield('content')
+                            </div>
+                        @else                         
+                        <div class="column is-half is-offset-one-quarter">
+                                @yield('content')
+                            </div>
+                        @endif
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
 
     <!-- Scripts -->
