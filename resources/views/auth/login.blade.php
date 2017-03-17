@@ -6,7 +6,7 @@
         {{ csrf_field() }}
             <div class="field">
                 <p class="control has-icon">
-                    <input class="input{{ $errors->has('email') ? ' has-error' : '' }}" type="email" placeholder="Email">
+                    <input class="input{{ $errors->has('email') ? ' has-error' : '' }}" type="email" name="email" placeholder="Email">
                     <span class="icon is-small">
                         <i class="fa fa-envelope"></i>
                     </span>
@@ -19,7 +19,7 @@
                 </div>
                 <div class="field">
                     <p class="control has-icon">
-                        <input class="input{{ $errors->has('password') ? ' has-error' : '' }}" type="password" placeholder="Password">
+                        <input class="input{{ $errors->has('password') ? ' has-error' : '' }}" name="password" type="password" placeholder="Password">
                         <span class="icon is-small">
                             <i class="fa fa-lock"></i>
                         </span>
