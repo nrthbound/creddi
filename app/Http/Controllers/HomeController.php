@@ -25,4 +25,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    /**
+     * Show the settings page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+     public function settings()
+     {
+        return view('settings');
+     }
 }
