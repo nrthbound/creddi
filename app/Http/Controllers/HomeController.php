@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\AccountType;
+
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -33,6 +35,17 @@ class HomeController extends Controller
      */
      public function settings()
      {
-        return view('settings');
+        $accountTypes = AccountType::all();        
+        return view('settings', compact('accountTypes'));
      }
+
+     public function settingsNew(Request $request)
+     {
+         $accountType = new AccountType;
+         $accountType->account_type = $request->account_type;
+         $accountType->save();
+         return back();
+
+     }
+
 }

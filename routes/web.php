@@ -18,4 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
 Route::get('/settings', 'HomeController@settings')->name('settings');
+Route::post('/settings/accountype/new', 'HomeController@settingsNew')->name('new-account-type');

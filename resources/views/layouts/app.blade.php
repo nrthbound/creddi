@@ -48,6 +48,21 @@
             </section>
         </div>
 
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+            <p>
+                <strong>Creddi</strong> by <a href="https://github.com/tetshi/creddi">Travis Ray</a>.
+            </p>
+            <p>
+                <a class="icon" href="https://github.com/tetshi/creddi">
+                <i class="fa fa-heart"></i>
+                </a>
+            </p>
+            </div>
+        </div>
+    </footer>
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
